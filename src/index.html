@@ -8,6 +8,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>EU</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
@@ -19,7 +26,7 @@
 		<![endif]-->
     <style>
         body {
-            background-color: aliceblue;
+            background-color: #d2f7f6;
         }
     </style>
 </head>
@@ -28,29 +35,30 @@
     <div class="container" style="width: 650px">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="text-center"><u>ELECTION UNION</u></h1>
+                <h1 class="text-center" style="font-family: 'Roboto', sans-serif;"><u>ELECTION UNION</u></h1>
                 <br>
-                <h3 class="text-center">ELECTION RESULTS (LIVE)</h3>
+                <h3 class="text-center" style="font-family: 'Roboto', sans-serif;">ELECTION RESULTS (LIVE)</h3>
                 <hr />
                 <br />
                 <div id="loader">
                     <p class="text-center">Loading...Please Wait!!</p>
                 </div>
-                <div id="content" style="display: none">
-                    <table class="table table-hover table-bordered">
+                <div style="text-align:center;" id="content" style="display: none">
+                    <table class="table table-hover table-bordered" style="text-align:center;font-family: 'Libre Baskerville', serif;
+                    font-family: 'Roboto', sans-serif;">
                         <thead>
                             <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">NAME</th>
-                                <th scope="col">VOTES</th>
+                                <th style="text-align:center;" scope="col"><u>ID</u></th>
+                                <th style="text-align:center;" scope="col"><u>NAME</u></th>
+                                <th style="text-align:center;" scope="col"><u>VOTES</u></th>
                             </tr>
                         </thead>
-                        <tbody id="candidatesResults"></tbody>
+                        <tbody id="candidatesResults" style="text-align:center;"></tbody>
                     </table>
                     <hr />
                     <form onSubmit="App.castVote()">
                         <div class="form-group">
-                            <label for="candidatesSelect">Select Candidate to Vote</label>
+                            <label for="candidatesSelect">Select Candidate:</label>
                             <select class="form-control" id="candidatesSelect"></select>
                         </div>
                         <button type="submit" class="btn btn-primary">Vote</button>
